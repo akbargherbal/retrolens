@@ -9,6 +9,18 @@ Commands:
   python retrolens.py list --category <cat>     Filter by category
   python retrolens.py get  <alias>              Print promptlet text
   python retrolens.py get  <alias> --save       Save promptlet to <alias>.txt
+
+Cheat sheet:
+  # Browse
+  python retrolens.py list
+  python retrolens.py list --category diagnostic
+
+  # Inspect a promptlet before using it
+  python retrolens.py get d1-thinking-loop
+
+  # Get and save to file — paste into any UI, CLI agent, or API call
+  python retrolens.py get d1-thinking-loop --save
+  python retrolens.py get e1-session-conclusion --save
 """
 
 import argparse
