@@ -1,4 +1,4 @@
 # Thinking Loop Autopsy
 # alias: d1-thinking-loop | category: diagnostic
 
-Analyze this session log and identify why the LLM entered a runaway reasoning or thinking loop. Look for the structural trigger in the prompt that caused it â€” ambiguous goal, unbounded search space, missing termination condition, or conflicting constraints. Identify the exact turn where the loop began, what the LLM was trying to resolve, and what a corrected prompt would have looked like to prevent it.
+Analyze this session log and identify why the LLM entered a runaway reasoning or thinking loop. Look for the structural trigger in the prompt that caused it - ambiguous goal, unbounded search space, missing termination condition, or conflicting constraints. Identify the exact turn where the loop began, what the LLM was trying to resolve, and what a corrected prompt would have looked like to prevent it.
