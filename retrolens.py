@@ -91,6 +91,19 @@ def main():
     parser = argparse.ArgumentParser(
         description="RetroLens CLI — browse and retrieve promptlets",
         formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "cheat sheet:\n"
+            "  # Browse\n"
+            "  python retrolens.py list\n"
+            "  python retrolens.py list --category diagnostic\n"
+            "\n"
+            "  # Inspect a promptlet before using it\n"
+            "  python retrolens.py get d1-thinking-loop\n"
+            "\n"
+            "  # Get and save to file — paste into any UI, CLI agent, or API call\n"
+            "  python retrolens.py get d1-thinking-loop --save\n"
+            "  python retrolens.py get e1-session-conclusion --save\n"
+        ),
     )
     sub = parser.add_subparsers(dest="command", metavar="command")
 
