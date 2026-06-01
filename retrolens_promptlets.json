@@ -4,14 +4,14 @@
     "name": "Thinking Loop Autopsy",
     "category": "diagnostic",
     "description": "Why did the LLM enter a runaway reasoning loop?",
-    "promptlet": "Analyze this session log and identify why the LLM entered a runaway reasoning or thinking loop. Look for the structural trigger in the prompt that caused it — ambiguous goal, unbounded search space, missing termination condition, or conflicting constraints. Identify the exact turn where the loop began, what the LLM was trying to resolve, and what a corrected prompt would have looked like to prevent it."
+    "promptlet": "Analyze this session log and identify why the LLM entered a runaway reasoning or thinking loop. Look for the structural trigger in the prompt that caused it - ambiguous goal, unbounded search space, missing termination condition, or conflicting constraints. Identify the exact turn where the loop began, what the LLM was trying to resolve, and what a corrected prompt would have looked like to prevent it."
   },
   {
     "alias": "d2-friction-map",
     "name": "Friction Map",
     "category": "diagnostic",
     "description": "Where did the user have to repeat, rephrase, or correct the LLM?",
-    "promptlet": "Build a turn-by-turn friction log for this session. A friction point is any turn where the user had to repeat, rephrase, clarify, or correct the LLM. For each friction point, name the root cause at the prompt level — ambiguity, missing context, wrong technique, or poor constraints. Summarize the overall friction pattern and describe what a lower-friction version of this session would have looked like."
+    "promptlet": "Build a turn-by-turn friction log for this session. A friction point is any turn where the user had to repeat, rephrase, clarify, or correct the LLM. For each friction point, name the root cause at the prompt level - ambiguity, missing context, wrong technique, or poor constraints. Summarize the overall friction pattern and describe what a lower-friction version of this session would have looked like."
   },
   {
     "alias": "d3-context-collapse",
@@ -39,35 +39,35 @@
     "name": "Session Conclusion Extractor",
     "category": "extraction",
     "description": "What did the user and LLM produce, decide, or agree on?",
-    "promptlet": "Extract the concrete outputs and agreements from this session. What did the user and LLM produce, decide, or commit to? What tasks were completed versus left unresolved? Summarize open threads, pending decisions, and any implicit next steps. Do not analyze prompt quality — deliver a clean factual summary of where the session ended and what it produced."
+    "promptlet": "Extract the concrete outputs and agreements from this session. What did the user and LLM produce, decide, or commit to? What tasks were completed versus left unresolved? Summarize open threads, pending decisions, and any implicit next steps. Do not analyze prompt quality - deliver a clean factual summary of where the session ended and what it produced."
   },
   {
     "alias": "e2-best-prompt",
     "name": "Best Prompt Extractor",
     "category": "extraction",
     "description": "Which single prompt in the session performed best, and why?",
-    "promptlet": "Identify the single highest-performing prompt in this session. Surface the exact prompt text, explain what structural elements made it effective — role assignment, constraint clarity, output specification, or other techniques — and extract it as a reusable template with placeholders replacing any session-specific content."
+    "promptlet": "Identify the single highest-performing prompt in this session. Surface the exact prompt text, explain what structural elements made it effective - role assignment, constraint clarity, output specification, or other techniques - and extract it as a reusable template with placeholders replacing any session-specific content."
   },
   {
     "alias": "e3-missing-context",
     "name": "Missing Context Detector",
     "category": "extraction",
     "description": "What did the user never say but should have?",
-    "promptlet": "Analyze what the user never stated but should have. Identify every silent assumption the LLM made — about scope, format, audience, constraints, or domain knowledge — that caused it to drift or underperform. For each gap, state what explicit prompt element would have closed it and how it should have been phrased."
+    "promptlet": "Analyze what the user never stated but should have. Identify every silent assumption the LLM made - about scope, format, audience, constraints, or domain knowledge - that caused it to drift or underperform. For each gap, state what explicit prompt element would have closed it and how it should have been phrased."
   },
   {
     "alias": "e4-aha-moment",
     "name": "Aha Moment Locator",
     "category": "extraction",
     "description": "Find the exact prompt that unlocked a breakthrough after a struggling phase.",
-    "promptlet": "Find the turning point in this session — the exact prompt that unlocked a breakthrough after a struggling phase. Reproduce the prompt text, analyze what structural element flipped the LLM's performance, and extract the transferable lesson: what technique or pattern caused the shift, and how can it be applied deliberately in future sessions?"
+    "promptlet": "Find the turning point in this session - the exact prompt that unlocked a breakthrough after a struggling phase. Reproduce the prompt text, analyze what structural element flipped the LLM's performance, and extract the transferable lesson: what technique or pattern caused the shift, and how can it be applied deliberately in future sessions?"
   },
   {
     "alias": "e5-technique-inventory",
     "name": "Technique Inventory",
     "category": "extraction",
     "description": "List every prompt engineering technique visible in this session.",
-    "promptlet": "List every prompt engineering technique visible in this session, whether used intentionally or accidentally. For each technique, name it, cite the turn where it appeared, and deliver a one-line verdict: did it work, partially work, or fail — and why?"
+    "promptlet": "List every prompt engineering technique visible in this session, whether used intentionally or accidentally. For each technique, name it, cite the turn where it appeared, and deliver a one-line verdict: did it work, partially work, or fail - and why?"
   },
   {
     "alias": "o1-replay-optimizer",
@@ -81,7 +81,7 @@
     "name": "Token Waste Analyzer",
     "category": "optimization",
     "description": "Where were tokens burned on redundancy, hedging, or circular exchanges?",
-    "promptlet": "Identify where tokens were wasted in this session — redundant clarifications, circular exchanges, over-explained outputs, repeated corrections, or verbose LLM hedging. For each waste zone, identify the prompt-level cause and state what tighter prompting would have eliminated it."
+    "promptlet": "Identify where tokens were wasted in this session - redundant clarifications, circular exchanges, over-explained outputs, repeated corrections, or verbose LLM hedging. For each waste zone, identify the prompt-level cause and state what tighter prompting would have eliminated it."
   },
   {
     "alias": "o3-mvp-prompt",
@@ -95,14 +95,14 @@
     "name": "Multi-Session Comparator",
     "category": "comparative",
     "description": "Compare two sessions on the same topic: what changed, improved, or regressed?",
-    "promptlet": "Compare the two attached session logs on the same topic or task. What changed between them — in the user's prompting approach, the LLM's behavior, and the quality of output? Was each change intentional or reactive? Identify what improved, what regressed, and what the single most important structural shift was between the two sessions."
+    "promptlet": "Compare the two attached session logs on the same topic or task. What changed between them - in the user's prompting approach, the LLM's behavior, and the quality of output? Was each change intentional or reactive? Identify what improved, what regressed, and what the single most important structural shift was between the two sessions."
   },
   {
     "alias": "c2-prompt-evolution",
     "name": "User Prompt Evolution Tracker",
     "category": "comparative",
     "description": "Did the user's prompting quality improve or degrade within the session?",
-    "promptlet": "Track how the user's prompting quality evolved within this session. Did their prompts become more precise, more constrained, and better structured as the session progressed — or did they degrade under frustration? Map the trajectory turn by turn and identify what caused each meaningful shift in quality."
+    "promptlet": "Track how the user's prompting quality evolved within this session. Did their prompts become more precise, more constrained, and better structured as the session progressed - or did they degrade under frustration? Map the trajectory turn by turn and identify what caused each meaningful shift in quality."
   },
   {
     "alias": "a1-pattern-library",
